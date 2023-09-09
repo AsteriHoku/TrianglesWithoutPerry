@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
 int triHead = 10;
 int triNum = 55;
@@ -16,15 +14,12 @@ while (divisors <= 500)
     triNum += triHead;
     int max = triNum / 2;
 
-    for (int i = 2; i <= max; i++)
-    {
-        if (triNum % i == 0)
-        {
+    for (int i = 2; i <= max; ++i) {
+        if (triNum % i == 0) {
             divisors += 2;
             max = triNum / i;
         }
-        if (divisors == 501)
-        {
+        if (divisors == 501) {
             break;
         }
     }
